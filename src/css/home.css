@@ -1,0 +1,182 @@
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('../images/header.png');
+}
+
+header>img:nth-child(2) {
+    margin: 1em 0;
+}
+
+header>img {
+    width: 25%;
+}
+
+header>span img {
+    width: 20px;
+    height: 20px;
+}
+
+header span {
+    display: flex;
+    align-items: center;
+    line-height: 60px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+header span:nth-child(2) {
+    font-size: 1.5em;
+}
+.banner img {
+  width:100%;
+}
+.content-title {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-top: 1px solid red;
+    position: relative;
+}
+
+.content-title h2 {
+    margin: 0;
+    font-size: 1em;
+    line-height: 20px;
+    text-align: center;
+    width: 60%;
+    background-color: #f4f4f4;
+    position: absolute;
+    text-align: center;
+    color: red;
+    left: 20%;
+    top: -10px;
+}
+.content-a {
+    padding-top: 10%;
+}
+
+.content-a {
+    display: flex;
+    justify-content: space-around;
+}
+
+.task {
+    width: 47%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.text>p {
+    margin: 0;
+    font-size: .7em;
+}
+
+.text>p a {
+    color: rgba(0, 0, 0, 0.65)
+}
+
+.text img {
+    width: 60%;
+}
+
+.pople {
+    display: flex;
+}
+
+.pople>div span {
+    font-size: .7em;
+    line-height: .8em;
+    line-height: 1.5em;
+}
+
+.pople>img {
+    width: 28%;
+    height: 20%;
+}
+
+.content-a div:nth-child(2) .text {
+    padding-bottom: 5%;
+}
+
+.pople-a {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pople-a>div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pople-a>div:nth-child(1) {
+    width: 66%;
+    height: 100%;
+}
+
+.pople-a>div:nth-child(2) {
+    width: 44%;
+    height: 100%;
+    margin-left: 0.5em;
+}
+
+.pople-a>div:nth-child(2) img {
+    width: 45%;
+    height: 100%;
+}
+
+.pople-a img {
+    width: 25%;
+    height: 100%;
+}
+
+.address img {
+    width: 15%;
+}
+
+
+.recommend {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+.recommend img:nth-child(1) {
+    width: 32%;
+    height: 40%;
+}
+
+.recommend img:nth-child(2) {
+    width: 40%;
+    height: 40%;
+}
+
+.recommend img:nth-child(3) {
+    width: 26%;
+    height: 40%;
+}
+
+.jianjie {
+    background-color: #fff;
+    padding: 0.5em;
+}
+
+.jianjie p {
+    margin-bottom: 0.5em;
+}
+
+.jianjie div img {
+    width: 8%;
+}
+
+.jianjie div img:nth-child(3) {
+    width: 11%;
+}
+
+.jianjie div a:nth-child(3) {
+    color: rgba(0, 0, 0, 0.65);
+}
