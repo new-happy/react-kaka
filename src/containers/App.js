@@ -9,6 +9,7 @@ import LayoutContainer from './LayoutContainer'
 import TheTaskContainer from './TheTaskContainer'
 import SubmitTask from '../component/SubmitTask'
 import CommentContainer from './CommentContainer'
+import LookForContainer from './LookForContainer'
 
 class App extends Component {
   render () {
@@ -21,6 +22,7 @@ class App extends Component {
            <Route path='/the-task/:id' exact component={TheTaskContainer} />
            <Route path='/submit-task' component={SubmitTask} />
            <Route path='/comments' component={ CommentContainer } />
+           <Route path='/look-for' component={ LookForContainer } />
        </div>
      </Router>
 

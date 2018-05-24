@@ -8,6 +8,7 @@ import imgSrc4 from '../images/banner3.jpg'
 import imgSrc7 from '../images/11.png'
 import imgSrc8 from '../images/12.png'
 import imgSrc9 from '../images/13.png'
+import imgSrc6 from '../images/222.png'
 import Hammer from 'react-hammerjs'
 import { Carousel } from 'antd'
 import 'antd/dist/antd.css';
@@ -17,7 +18,8 @@ import { Link } from 'react-router-dom'
 
  class Home extends Component {
      state = {
-         hometext:''
+         hometext:'',
+         office1:''
      }
      componentDidMount(){
          if(sessionStorage.office === undefined){
@@ -27,21 +29,34 @@ import { Link } from 'react-router-dom'
              this.setState({
              hometext:this.props.home
          })
+         if(sessionStorage.office1 === undefined){
+             this.setState({
+                 office1:'true'
+             })
+             sessionStorage.office1 = 'false'    
+         }else{
+             this.setState({
+                 office1: 'false'
+             })
+         }
          }  
      }
      handleTap = (url) => {
          this.props.history.push(url)
      }
+     handleOff = () => {
+         this.setState({
+             office1 : "false"
+         })
+     }
   render () {
       console.log(this.props);
+      
       const { newtask, recommends, check,like,comment } = this.state.hometext
       const content = newtask ? newtask.map(item => {
           return (<div className='task' key={item.id}>
               <div className='text'>
-                  <p><Link to={{
-                      pathname: `/the-task/${item.id}`,
-                      state: { item }
-                  }}>{item.text}</Link></p>
+                  <p><Link to={`/the-task/${item.id}`}>{item.text}</Link></p>
                   <img src={item.img} alt="" />
               </div>
               <div className="pople">
@@ -65,13 +80,24 @@ import { Link } from 'react-router-dom'
               </div>
           </div>)
       }) : '请稍后'
-      const { goEvent } = this.props
-      console.log(goEvent);
+      const { office1 } = this.state
       const recommend = recommends ? recommends.map( (item,i) => {
           return <img src={item} alt="a" key={i} />
       }) : '请稍后'
    return (
        <div className="home-page">
+          <Hammer onTap={this.handleOff}>
+            <div className="mask" style={{ display: office1 !== "false" ? 'block' : 'none' }}>
+                <div>
+                    <div className="icon">
+                       <div><img src={imgSrc6} alt="1" /></div>
+                    </div>
+                    <p>恭喜你获得今日的奖励</p>
+                     <h1>+10 <span>积分</span></h1>
+                     <h2>每日登录即可获得奖励</h2>
+               </div>
+             </div>
+          </Hammer>
           <header>
                <Hammer onTap={() => this.handleTap('city')}><span>武汉<img src={imgSrc1} alt="1" /></span></Hammer>
                <img src={kaka} alt="" />
@@ -90,20 +116,20 @@ import { Link } from 'react-router-dom'
                     { content }
                 </div>
                <div className="content-title"><h2>今日推荐</h2></div>
-                   <div>
-                       <div className="recommend">
+                <div>
+                    <div className="recommend">
                           { recommend }
-                       </div>
-                       <div className="jianjie">
-                           <p>所罗门-R-古根海娒美术馆（The Solomon R .Guggenheim Museum)</p>
-                           <span>古根海娒美术馆</span>
-                           <div>
-                           <span><img src={imgSrc9} alt="" />{check}</span>
-                               <span><img src={imgSrc7} alt="" />{like}</span>
-                               <Link to='/comments'><span><img src={imgSrc8} alt="" />{comment}</span></Link>
-                           </div>
-                       </div>
-                   </div>
+                    </div>
+                    <div className="jianjie">
+                        <p>所罗门-R-古根海娒美术馆（The Solomon R .Guggenheim Museum)</p>
+                        <span>古根海娒美术馆</span>
+                        <div>
+                        <span><img src={imgSrc9} alt="" />{check}</span>
+                            <span><img src={imgSrc7} alt="" />{like}</span>
+                            <Link to='/comments'><span><img src={imgSrc8} alt="" />{comment}</span></Link>
+                        </div>
+                    </div>
+                </div>
            </div>
        </div>
     )

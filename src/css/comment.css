@@ -51,8 +51,8 @@
     padding: 1em;
     display: flex;
     justify-content: space-between;
-    /*position: fixed;
-  bottom: 10%;*/
+    position: fixed;
+    bottom: 0;
 }
 
 .texts img {
@@ -74,4 +74,5 @@
     background-color: #ed1717;
     color: #fff;
     border-radius: 50%;
+    outline: none;
 }

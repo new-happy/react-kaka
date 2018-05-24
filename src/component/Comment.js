@@ -29,7 +29,10 @@ import shortid from 'shortid'
                text: this.state.inputText,
                huifu: []
            }
-           this.props.addComment(pople1)  
+           this.props.addComment(pople1)
+           this.setState({
+               inputText: ''
+           }) 
        }
      }
      handleGo = (num) => {
@@ -37,7 +40,6 @@ import shortid from 'shortid'
      }
   render () {
       const { comment } = this.props
-      console.log(this.props);
       const comments = comment ? comment.map(item => {
           return (<div key={item.id} className="comments-user">
               <div className='user-title'>
@@ -59,7 +61,9 @@ import shortid from 'shortid'
    return (
     <div className='Comment'>
            <header>
-               <Hammer onTap={() => this.handleGo(-1)}><span><img src={imgSrc} alt="1" /></span></Hammer>
+               <Hammer onTap={() => this.handleGo(-1)}>
+                   <span><img src={imgSrc} alt="1" /></span>
+               </Hammer>
                <span>评论详情</span>
                <span></span>
            </header>

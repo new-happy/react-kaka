@@ -40,9 +40,9 @@ import zhuYi from '../images/zhuyi.png'
      }
   render () {
       console.log(this.props);
+      
       const { match,home } = this.props
       const task = home.newtask.find(t => t.id === match.params.id)
-      console.log(task);
       
    return (
     <div className='TheTask'>
