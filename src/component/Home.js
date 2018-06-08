@@ -14,6 +14,7 @@ import { Carousel } from 'antd'
 import 'antd/dist/antd.css';
 import '../css/home.css'
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
 
  class Home extends Component {
@@ -131,6 +132,7 @@ import { Link } from 'react-router-dom'
                     </div>
                 </div>
            </div>
+           <Footer />
        </div>
     )
  }

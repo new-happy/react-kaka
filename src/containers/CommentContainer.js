@@ -3,7 +3,7 @@ import Comment from '../component/Comment'
 import { connect } from 'react-redux'
 import { addComment, removeComment } from '../actions'
 
-const CommentContainers = props => <Comment {...props} />
+const CommentContainer = props => <Comment {...props} />
 
 const mapStateToProps = state => ({
     comment:state.comment
@@ -12,4 +12,4 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps ,{
     addComment,
     removeComment
-})(CommentContainers)
+})(CommentContainer)

@@ -16,7 +16,7 @@ import imgDz from '../images/654.png'
 
 const initialState = [
      {
-        id:1,
+        id:'1',
         name:'泡沫',
         url:user4,
         icon: girl,
@@ -30,7 +30,7 @@ const initialState = [
         imgdz: imgDz
       },
       {
-        id:2,
+        id:'2',
         name:'初夏',
         url:user5,
         icon: girl,
@@ -44,7 +44,7 @@ const initialState = [
         imgdz: imgDz
       },
       {
-        id:3,
+        id:'3',
         name:'陈 xx',
         url:user6,
         icon: boy,
