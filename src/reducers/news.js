@@ -18,7 +18,7 @@ const initialState =  [
             name: '系统通知',
             text: '30秒带你体验随享咔咔',
             data: '下午01:25',
-            link: '/news/system'
+            link: '/system'
         },
         {
             id: 3,

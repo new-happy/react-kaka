@@ -9,6 +9,7 @@ import kaka from '../images/u75.svg'
 import imgSrc5 from '../images/u371.png'
 import '../css/look-for.css'
 import { Modal } from 'antd'
+import Footer from './Footer'
 
  class LookFor extends Component {
      state = {
@@ -76,6 +77,7 @@ import { Modal } from 'antd'
            >
                <img src={imgSrc5} alt="" className="imgUrl" />
            </Modal>
+           <Footer />
     </div>
     )
  }

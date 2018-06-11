@@ -59,7 +59,7 @@ import shortid from 'shortid'
           </div>)
       }) : ''
    return (
-    <div className='Comment'>
+    <div className='comments'>
            <header>
                <Hammer onTap={() => this.handleGo(-1)}>
                    <span><img src={imgSrc} alt="1" /></span>

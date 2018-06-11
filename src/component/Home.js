@@ -86,7 +86,7 @@ import Footer from './Footer'
           return <img src={item} alt="a" key={i} />
       }) : '请稍后'
    return (
-       <div className="home-page">
+       <div className="home">
           <Hammer onTap={this.handleOff}>
             <div className="mask" style={{ display: office1 !== "false" ? 'block' : 'none' }}>
                 <div>

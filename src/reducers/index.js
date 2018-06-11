@@ -6,6 +6,8 @@ import lookfor from './lookfor'
 import news from './news'
 import cards from './cards'
 import accounts from './accounts'
+import extract from './extract'
+import integral from './integral'
 
 
 export default combineReducers({
@@ -14,5 +16,7 @@ export default combineReducers({
     lookfor,
     news,
     cards,
-    accounts
+    accounts,
+    extract,
+    integral
 })

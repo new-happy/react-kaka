@@ -12,6 +12,9 @@ import '../css/account.css'
      handleClick = (url) => {
          this.props.history.push(url)
      }
+     handleTap =() => {
+         this.props.history.go(-1)
+     }
   render () {
       const { accounts } = store.getState()
       const account = accounts.map( t => {

@@ -5,6 +5,7 @@ import user1 from '../images/user1.png'
 import Hammer from 'react-hammerjs'
 import { Link } from 'react-router-dom'
 import '../css/card.css'
+import Footer from './Footer'
 
  class Card extends Component {
      state = {
@@ -30,7 +31,7 @@ import '../css/card.css'
           </div></Hammer>)
       })
       const taskOne = task.map(item => {
-          return (<Link to={ `/business-card/${item.id}`} key={item.id}><div>
+          return (<Link to={ `/business/${item.id}`} key={item.id}><div>
                   <img src={item.img} alt="1" />
                   <span>{item.text} <img src={item.qianjin} alt="1" /></span>
               </div></Link>)
@@ -61,6 +62,7 @@ import '../css/card.css'
          <div className="card-downb">{taskOne}</div>
          <div>{aboutOne}</div>
        </div>
+       <Footer />
     </div>
     )
  }

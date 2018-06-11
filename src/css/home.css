@@ -1,4 +1,6 @@
-
+.home {
+    padding-bottom: 4em;
+}
 .mask {
     width: 100%;
     text-align: center;
@@ -95,6 +97,7 @@ header span {
 
 header span:nth-child(2) {
     font-size: 1.5em;
+    font-weight: 700;
 }
 .banner img {
   width:100%;

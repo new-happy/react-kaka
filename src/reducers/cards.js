@@ -27,19 +27,19 @@ const initialState = {
     ],
     task: [
         {
-            id: 3,
+            id: '3',
             text: '已完成任务',
             img: card3,
             value: '您还没有完成的任务',
             qianjin: qianjin
         }, {
-            id: 4,
+            id: '4',
             text: '已发布任务',
             img: card4,
             value: '您还没有发布任务',
             qianjin: qianjin
         }, {
-            id: 5,
+            id: '5',
             text: '我的收藏',
             img: card5,
             value: '您还没有收藏',

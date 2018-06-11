@@ -2,12 +2,15 @@ import React,{ Component} from 'react'
 import Hammer from 'react-hammerjs'
 import kaka from '../images/u75.svg'
 import '../css/news.css'
+import Footer from './Footer'
 
  class News extends Component {
      handleTap = (url) => {
          this.props.history.push(url)
      }
   render () {
+      console.log(this.props);
+      
       const { news } = this.props
       const newa =  news.map(item => {
           return (<Hammer key={item.id} onTap={() => this.handleTap(item.link)}><div>
@@ -29,6 +32,7 @@ import '../css/news.css'
         <div className="news-main">
             {newa}
         </div>
+        <Footer />
     </div>
     )
  }
