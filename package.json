@@ -1,9 +1,11 @@
 {
   "name": "happy-doem",
   "version": "0.1.0",
+  "homepage": "http://new-happy.github.io/react-kaka",
   "private": true,
   "dependencies": {
     "antd": "^3.5.2",
+    "gh-pages": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hammerjs": "^1.0.1",
@@ -16,6 +18,7 @@
     "styled-components": "^3.3.2"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

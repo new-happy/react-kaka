@@ -31,7 +31,7 @@ import Footer from './Footer'
           </div></Hammer>)
       })
       const taskOne = task.map(item => {
-          return (<Link to={ `/business/${item.id}`} key={item.id}><div>
+          return (<Link to={ `/card/business/${item.id}`} key={item.id}><div>
                   <img src={item.img} alt="1" />
                   <span>{item.text} <img src={item.qianjin} alt="1" /></span>
               </div></Link>)
