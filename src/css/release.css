@@ -1,3 +1,7 @@
+.release {
+  padding-bottom: 8em;
+}
+
 .release textarea {
   padding: 1em;
   margin: 0;
